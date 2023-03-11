@@ -176,6 +176,7 @@ class CameraGroup(pygame.sprite.Group):
 
 pygame.init()
 screen = pygame.display.set_mode((1280,720))
+pygame.display.set_caption('Camera Fun')
 clock = pygame.time.Clock()
 pygame.event.set_grab(True)
 
@@ -207,4 +208,6 @@ while True:
 	camera_group.custom_draw(player)
 
 	pygame.display.update()
-	clock.tick(60)
+	clock.tick(60) # sets the maximum frame rate to 60 per second, so the while loop will run maximum 60 times per second
+	               # this ensures that the game won't run too hot (fast), but the only way to make sure it doesn't run less than
+				   # 60 FPS is to write effecient code and not paint too many objects to the screen
