@@ -150,10 +150,11 @@ class CameraGroup(pygame.sprite.Group):
 
 	def custom_draw(self,player):
 		
-		# self.center_target_camera(player)
-		# self.box_target_camera(player)
+		# Barney uncomment the camera you want to use
+		#self.center_target_camera(player)
+		self.box_target_camera(player)
 		# self.keyboard_control()
-		self.mouse_control()
+		#self.mouse_control()
 		self.zoom_keyboard_control()
 
 		self.internal_surf.fill('#71ddee')
